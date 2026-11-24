@@ -1,156 +1,286 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
-  <rect width="1024" height="1024" fill="#f3efe6"/>
-  <rect width="1024" height="142" fill="#102a43"/>
-  <text x="54" y="58" fill="#f5c542" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700" letter-spacing="3">THE WORLD / NEWS FILE</text>
-  <text x="52" y="112" fill="#ffffff" font-family="DejaVu Sans, sans-serif" font-size="48" font-weight="700">MONDAY 23 NOVEMBER 2026</text>
-  <text x="970" y="53" text-anchor="end" fill="#9fc5d8" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700">10 STORIES • ONE DAY</text>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a1826"/>
+      <stop offset="1" stop-color="#1a4e63"/>
+    </linearGradient>
+    <radialGradient id="blast" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffd75e"/>
+      <stop offset="0.45" stop-color="#f08a2e"/>
+      <stop offset="1" stop-color="#d8492b"/>
+    </radialGradient>
+  </defs>
 
-  <!-- Lead: Ukraine sea drones hit Russian ships in Libya -->
-  <rect x="44" y="170" width="606" height="394" rx="8" fill="#dbeaf0" stroke="#102a43" stroke-width="3"/>
-  <rect x="44" y="170" width="606" height="42" rx="8" fill="#d84f3f"/>
-  <text x="66" y="199" fill="#fff" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700" letter-spacing="2">UKRAINE / LIBYA — LEAD STORY</text>
-  <text x="68" y="254" fill="#102a43" font-family="DejaVu Sans, sans-serif" font-size="34" font-weight="700">SEA DRONES HIT</text>
-  <text x="68" y="294" fill="#102a43" font-family="DejaVu Sans, sans-serif" font-size="34" font-weight="700">RUSSIAN SHIPS</text>
-  <text x="68" y="328" fill="#355b6e" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="700">Zelensky says a corvette was sunk</text>
-  <text x="68" y="352" fill="#355b6e" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="700">at Benghazi and a cargo ship hit.</text>
-  <text x="68" y="382" fill="#355b6e" font-family="DejaVu Sans, sans-serif" font-size="16">Ukraine says seven drones launched</text>
-  <text x="68" y="405" fill="#355b6e" font-family="DejaVu Sans, sans-serif" font-size="16">from a mothership. Kremlin warns</text>
-  <text x="68" y="428" fill="#355b6e" font-family="DejaVu Sans, sans-serif" font-size="16">of “escalation”.</text>
+  <!-- ===== paper ===== -->
+  <rect width="1024" height="1024" fill="#f5f0e2"/>
+  <rect width="1024" height="7" fill="#d8492b"/>
 
-  <!-- sea: coastline, smoke, tilted hit corvette, drones with wakes -->
-  <path d="M68 516 Q155 503 246 516 Q345 530 428 510 Q498 493 570 512 L630 540 L630 564 L68 564 Z" fill="#277c9b"/>
-  <path d="M68 505 Q155 491 246 504 Q345 518 428 498 Q498 481 570 500" fill="none" stroke="#b8dae8" stroke-width="8"/>
-  <path d="M397 475 L480 475 L527 502 L527 517 L397 517 Z" fill="#102a43"/>
-  <path d="M419 475 L419 447 L469 447 L469 475 Z" fill="#102a43"/>
-  <path d="M438 447 L438 425 L451 425 L451 447" fill="#102a43"/>
-  <path d="M414 475 L397 517" stroke="#d84f3f" stroke-width="8"/>
-  <path d="M424 447 q-25-32 12-41 q-7-18 12-25" fill="none" stroke="#7a7a73" stroke-width="10" stroke-linecap="round"/>
-  <path d="M434 462 q-24-28 9-40" fill="none" stroke="#d84f3f" stroke-width="6" stroke-linecap="round"/>
-  <g transform="translate(235 456)">
-    <path d="M0 18 L56 18 L73 31 L55 43 L0 43 Z" fill="#f5c542" stroke="#102a43" stroke-width="3"/>
-    <path d="M73 31 L88 31" stroke="#102a43" stroke-width="4"/>
-    <path d="M0 43 q-24 8 -43 22" fill="none" stroke="#b8dae8" stroke-width="5"/>
+  <!-- ===== masthead ===== -->
+  <text x="512" y="56" text-anchor="middle" fill="#17242e" font-family="Liberation Serif, DejaVu Serif, serif" font-size="34" font-weight="700" letter-spacing="4">THE WORLD DIGEST</text>
+  <text x="60" y="56" text-anchor="start" fill="#5d7183" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="12" font-weight="700" letter-spacing="2">WORLD EDITION</text>
+  <text x="964" y="56" text-anchor="end" fill="#5d7183" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="12" font-weight="700" letter-spacing="2">No. 23</text>
+  <rect x="40" y="68" width="944" height="3" fill="#17242e"/>
+  <rect x="40" y="76" width="944" height="1.4" fill="#17242e"/>
+  <text x="512" y="118" text-anchor="middle" fill="#17242e" font-family="Liberation Serif, DejaVu Serif, serif" font-size="50" font-weight="700">MONDAY, 23 NOVEMBER 2026</text>
+
+  <!-- ================= HERO : Benghazi strike ================= -->
+  <rect x="0" y="140" width="1024" height="360" fill="url(#sky)"/>
+
+  <!-- stars -->
+  <g fill="#cfe4ec" opacity="0.85">
+    <circle cx="620" cy="168" r="1.6"/><circle cx="700" cy="156" r="1.2"/>
+    <circle cx="770" cy="182" r="1.4"/><circle cx="850" cy="160" r="1.6"/>
+    <circle cx="920" cy="176" r="1.2"/><circle cx="990" cy="155" r="1.5"/>
+    <circle cx="655" cy="205" r="1.1"/><circle cx="950" cy="210" r="1.1"/>
   </g>
-  <g transform="translate(138 481)">
-    <path d="M0 14 L48 14 L63 25 L48 35 L0 35 Z" fill="#f5c542" stroke="#102a43" stroke-width="3"/>
-    <path d="M63 25 L78 25" stroke="#102a43" stroke-width="4"/>
-    <path d="M0 35 q-20 6 -36 18" fill="none" stroke="#b8dae8" stroke-width="5"/>
+
+  <!-- Benghazi skyline silhouette along the horizon -->
+  <g fill="#0d2431">
+    <rect x="610" y="330" width="30" height="16"/>
+    <rect x="644" y="316" width="22" height="30"/>
+    <rect x="956" y="326" width="18" height="26"/>
+    <path d="M652 316 L652 300 M652 300 q-8 0 -8 9" stroke="#0d2431" stroke-width="3.5" fill="none"/>
   </g>
-  <g transform="translate(317 444)">
-    <path d="M0 18 L56 18 L73 31 L55 43 L0 43 Z" fill="#f5c542" stroke="#102a43" stroke-width="3"/>
-    <path d="M73 31 L88 31" stroke="#102a43" stroke-width="4"/>
-    <path d="M0 43 q-24 8 -43 22" fill="none" stroke="#b8dae8" stroke-width="5"/>
+
+  <!-- sea -->
+  <rect x="0" y="346" width="1024" height="154" fill="#123f57"/>
+  <g stroke="#3d7f96" stroke-width="3" fill="none" opacity="0.8">
+    <path d="M40 372 q20 -7 42 0"/><path d="M150 392 q24 -8 46 0"/>
+    <path d="M90 430 q26 -8 50 0"/><path d="M230 458 q24 -8 46 0"/>
+    <path d="M330 372 q22 -7 44 0"/><path d="M560 460 q26 -8 48 0"/>
+    <path d="M640 402 q22 -7 42 0"/><path d="M40 472 q26 -8 48 0"/>
   </g>
-  <text x="520" y="544" fill="#ffffff" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="700" text-anchor="end">BENGHAZI, LIBYA</text>
 
-  <!-- COP31 -->
-  <rect x="672" y="170" width="308" height="188" rx="8" fill="#e6dfc9" stroke="#102a43" stroke-width="3"/>
-  <text x="692" y="201" fill="#d84f3f" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="700">CLIMATE / ANTALYA</text>
-  <text x="692" y="237" fill="#102a43" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700">COP31 ENDS</text>
-  <text x="692" y="267" fill="#102a43" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700">WITHOUT A DEAL</text>
-  <text x="692" y="301" fill="#355b6e" font-family="DejaVu Sans, sans-serif" font-size="15">Longest UN climate talks</text>
-  <text x="692" y="322" fill="#355b6e" font-family="DejaVu Sans, sans-serif" font-size="15">break down over fossil fuels.</text>
-  <circle cx="947" cy="336" r="15" fill="none" stroke="#277c9b" stroke-width="5"/>
-  <path d="M947 321 L947 336 L958 344" fill="none" stroke="#277c9b" stroke-width="3"/>
+  <!-- quay wall (right) -->
+  <rect x="948" y="352" width="76" height="14" fill="#26434f"/>
+  <rect x="948" y="366" width="76" height="134" fill="#1b333d"/>
+  <g fill="#0d2431"><rect x="960" y="344" width="8" height="10"/><rect x="990" y="344" width="8" height="10"/></g>
 
-  <!-- US House -->
-  <rect x="672" y="376" width="308" height="188" rx="8" fill="#dce8f4" stroke="#102a43" stroke-width="3"/>
-  <text x="692" y="407" fill="#d84f3f" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="700">UNITED STATES</text>
-  <text x="692" y="443" fill="#102a43" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700">DEMOCRATS FLIP</text>
-  <text x="692" y="472" fill="#102a43" font-family="DejaVu Sans, sans-serif" font-size="24" font-weight="700">THE HOUSE</text>
-  <text x="692" y="508" fill="#355b6e" font-family="DejaVu Sans, sans-serif" font-size="15">Largest majority since 1992:</text>
-  <text x="692" y="531" fill="#355b6e" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700">at least 258–173.</text>
-  <rect x="908" y="490" width="22" height="48" fill="#d84f3f"/>
-  <rect x="938" y="510" width="22" height="28" fill="#7aa7c2"/>
-  <text x="908" y="550" fill="#d84f3f" font-family="DejaVu Sans, sans-serif" font-size="12" font-weight="700">D</text>
-  <text x="938" y="550" fill="#47718a" font-family="DejaVu Sans, sans-serif" font-size="12" font-weight="700">R</text>
+  <!-- berthed corvette Merkury, listing -->
+  <g>
+    <path d="M700 352 L932 352 L948 366 L944 398 L704 398 Z" fill="#0e2531"/>
+    <rect x="778" y="322" width="82" height="30" fill="#0e2531"/>
+    <rect x="796" y="306" width="40" height="16" fill="#0e2531"/>
+    <path d="M818 306 L818 274" stroke="#0e2531" stroke-width="6"/>
+    <path d="M818 280 L844 290" stroke="#0e2531" stroke-width="4"/>
+    <!-- Russian naval ensign (St Andrew's) on the mast -->
+    <rect x="821" y="276" width="22" height="14" fill="#f5f0e2"/>
+    <path d="M821 276 L843 290 M843 276 L821 290" stroke="#3b6ea5" stroke-width="2.6"/>
+    <!-- gun turret forward -->
+    <path d="M712 352 L712 340 L734 340 L734 352" fill="#0e2531"/>
+    <path d="M715 340 L694 332" stroke="#0e2531" stroke-width="5"/>
+    <!-- lit portholes on the superstructure -->
+    <g fill="#f0b23e" opacity="0.9">
+      <rect x="790" y="332" width="7" height="5"/><rect x="804" y="332" width="7" height="5"/>
+      <rect x="818" y="332" width="7" height="5"/><rect x="832" y="332" width="7" height="5"/>
+    </g>
+    <!-- bow taper -->
+    <path d="M700 352 L686 344 L686 362 L700 360 Z" fill="#0e2531"/>
+    <!-- wrecked helicopter on deck -->
+    <path d="M880 344 l30 0 l-6 8 l-26 0 z" fill="#0e2531"/>
+    <path d="M894 344 l4 -10" stroke="#0e2531" stroke-width="4"/>
+    <!-- list: hull sitting lower aft -->
+    <path d="M704 398 L944 398 L940 410 L712 412 Z" fill="#0a1a24" opacity="0.9"/>
+    <!-- warm rim-light along the hull facing the blast -->
+    <path d="M700 354 L932 354" stroke="#f08a2e" stroke-width="2" opacity="0.55"/>
+  </g>
 
-  <!-- Middle three cards -->
-  <rect x="44" y="590" width="300" height="174" rx="8" fill="#f7e3d8" stroke="#102a43" stroke-width="3"/>
-  <text x="64" y="621" fill="#d84f3f" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="700">IRAN / UNITED STATES</text>
-  <text x="64" y="656" fill="#102a43" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700">TEHRAN / THREATENS</text>
-  <text x="64" y="684" fill="#102a43" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700">RESPONSE</text>
-  <text x="64" y="716" fill="#355b6e" font-family="DejaVu Sans, sans-serif" font-size="15">“All available means”</text>
-  <text x="64" y="738" fill="#355b6e" font-family="DejaVu Sans, sans-serif" font-size="15">against a US blockade.</text>
-  <!-- right-column warning sign -->
-  <path d="M270 750 L300 690 L330 750 Z" fill="#f5c542" stroke="#102a43" stroke-width="4"/>
-  <path d="M300 708 L300 728" stroke="#102a43" stroke-width="5"/>
-  <circle cx="300" cy="737" r="3" fill="#102a43"/>
+  <!-- explosion at the bow — restrained editorial fireball -->
+  <g transform="translate(706 352) scale(0.68) translate(-706 -352)">
+    <ellipse cx="706" cy="352" rx="62" ry="46" fill="#f08a2e" opacity="0.4"/>
+    <path d="M706 268 L718 318 L760 300 L726 336 L772 344 L726 356 L752 396 L714 366 L710 414 L698 366 L656 392 L684 352 L640 340 L686 334 L662 296 L700 322 Z" fill="url(#blast)"/>
+    <path d="M706 300 L712 330 L736 322 L716 340 L740 348 L716 352 L728 378 L708 360 L704 388 L696 362 L672 376 L688 350 L664 344 L690 336 L674 314 L700 328 Z" fill="#ffe9a3"/>
+  </g>
 
-  <rect x="362" y="590" width="300" height="174" rx="8" fill="#e8dfe0" stroke="#102a43" stroke-width="3"/>
-  <text x="382" y="621" fill="#d84f3f" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="700">UKRAINE / KYIV REGION</text>
-  <text x="382" y="656" fill="#102a43" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700">STRIKES KILL 15+</text>
-  <text x="382" y="688" fill="#355b6e" font-family="DejaVu Sans, sans-serif" font-size="15">A seven-year-old boy is</text>
-  <text x="382" y="710" fill="#355b6e" font-family="DejaVu Sans, sans-serif" font-size="15">pulled alive from rubble.</text>
-  <!-- damaged apartment blocks -->
-  <rect x="566" y="716" width="34" height="48" fill="#8a8f91"/>
-  <rect x="600" y="704" width="42" height="60" fill="#777d80"/>
-  <path d="M600 704 L610 693 L620 704 L630 690 L642 704" fill="#777d80" stroke="#102a43" stroke-width="3"/>
-  <rect x="574" y="726" width="8" height="10" fill="#102a43"/>
-  <rect x="586" y="726" width="8" height="10" fill="#102a43"/>
-  <rect x="574" y="748" width="8" height="10" fill="#d84f3f"/>
-  <rect x="609" y="718" width="9" height="11" fill="#102a43"/>
-  <rect x="624" y="718" width="9" height="11" fill="#102a43"/>
-  <rect x="609" y="742" width="9" height="11" fill="#d84f3f"/>
-  <path d="M566 764 L600 764 L600 753 L582 753 Z" fill="#c6c1bb"/>
-  <path d="M600 764 L642 764 L642 753 L615 753 Z" fill="#c6c1bb"/>
+  <!-- smoke plume -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M712 300 q-34 -22 -10 -50 q-26 -6 -14 -34 q-20 -16 2 -34" stroke="#5d7183" stroke-width="20" opacity="0.9"/>
+    <path d="M706 296 q-24 -20 -4 -44 q-18 -8 -8 -30" stroke="#33414b" stroke-width="10" opacity="0.9"/>
+  </g>
 
-  <rect x="680" y="590" width="300" height="174" rx="8" fill="#d9e8d9" stroke="#102a43" stroke-width="3"/>
-  <text x="700" y="621" fill="#d84f3f" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="700">GAZA</text>
-  <text x="700" y="656" fill="#102a43" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700">“TOXIC WASTELAND”</text>
-  <text x="700" y="688" fill="#355b6e" font-family="DejaVu Sans, sans-serif" font-size="15">Oxfam and scientists report</text>
-  <text x="700" y="710" fill="#355b6e" font-family="DejaVu Sans, sans-serif" font-size="15">contamination across almost</text>
-  <text x="700" y="732" fill="#355b6e" font-family="DejaVu Sans, sans-serif" font-size="15">all of Gaza: water, soil, air.</text>
-  <!-- drop, hazard mark, cracked ground -->
-  <path d="M940 654 q20 26 0 46 q-20-20 0-46z" fill="#277c9b"/>
-  <circle cx="940" cy="683" r="9" fill="#f5c542"/>
-  <text x="940" y="687" text-anchor="middle" fill="#102a43" font-family="DejaVu Sans, sans-serif" font-size="12" font-weight="700">!</text>
-  <path d="M928 712 l-13 20 M940 712 l12 20 M916 732 l48 0 M926 732 l-7 9 M952 732 l7 9" stroke="#d84f3f" stroke-width="3"/>
+  <!-- fire reflection on water -->
+  <g stroke="#f08a2e" stroke-width="4" opacity="0.65">
+    <path d="M700 410 l0 16"/><path d="M722 412 l0 24"/><path d="M678 414 l0 12"/>
+    <path d="M744 410 l0 18"/><path d="M760 414 l0 10"/>
+  </g>
 
-  <!-- Bottom cards -->
-  <rect x="44" y="790" width="208" height="174" rx="8" fill="#f0d7c6" stroke="#102a43" stroke-width="3"/>
-  <text x="62" y="820" fill="#d84f3f" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700">INDONESIA</text>
-  <text x="62" y="852" fill="#102a43" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700">FACTORY FIRE</text>
-  <text x="62" y="880" fill="#355b6e" font-family="DejaVu Sans, sans-serif" font-size="14">Banten: 24 killed;</text>
-  <text x="62" y="901" fill="#355b6e" font-family="DejaVu Sans, sans-serif" font-size="14">about 30 missing.</text>
-  <!-- flame in separate bottom-right area -->
-  <path d="M203 944 q-17-29 2-47 q-3 19 12 25 q5-15 14-24 q16 32-3 46z" fill="#d84f3f"/>
+  <!-- sea drones racing in -->
+  <g>
+    <g transform="translate(430 396)">
+      <path d="M0 8 L46 8 L58 16 L48 24 L4 24 Z" fill="#1b3a4a" stroke="#f0b23e" stroke-width="3"/>
+      <path d="M58 16 L74 16" stroke="#f0b23e" stroke-width="4"/>
+      <path d="M0 24 q-30 6 -58 26" stroke="#a9d6e4" stroke-width="5" fill="none"/>
+      <path d="M4 28 q-22 6 -44 20" stroke="#5d97aa" stroke-width="3" fill="none"/>
+    </g>
+    <g transform="translate(566 424)">
+      <path d="M0 7 L40 7 L50 14 L42 21 L3 21 Z" fill="#1b3a4a" stroke="#f0b23e" stroke-width="3"/>
+      <path d="M50 14 L64 14" stroke="#f0b23e" stroke-width="4"/>
+      <path d="M0 21 q-26 6 -50 22" stroke="#a9d6e4" stroke-width="4" fill="none"/>
+    </g>
+    <!-- foreground drone, lower left -->
+    <g transform="translate(88 438)">
+      <path d="M0 12 L74 12 L94 24 L78 36 L6 36 Z" fill="#1b3a4a" stroke="#f0b23e" stroke-width="4"/>
+      <path d="M30 12 L30 2 L58 2 L58 12" fill="none" stroke="#f0b23e" stroke-width="4"/>
+      <path d="M94 24 L116 24" stroke="#f0b23e" stroke-width="5"/>
+      <path d="M2 36 q-40 8 -80 34" stroke="#a9d6e4" stroke-width="6" fill="none"/>
+      <path d="M10 40 q-30 8 -58 26" stroke="#5d97aa" stroke-width="3.5" fill="none"/>
+    </g>
+    <g transform="translate(296 436)">
+      <path d="M0 9 L52 9 L66 19 L54 28 L4 28 Z" fill="#1b3a4a" stroke="#f0b23e" stroke-width="3"/>
+      <path d="M66 19 L84 19" stroke="#f0b23e" stroke-width="4"/>
+      <path d="M0 28 q-34 7 -64 28" stroke="#a9d6e4" stroke-width="5" fill="none"/>
+    </g>
+  </g>
 
-  <rect x="268" y="790" width="208" height="174" rx="8" fill="#dce8f4" stroke="#102a43" stroke-width="3"/>
-  <text x="286" y="820" fill="#d84f3f" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700">KENYA / DR CONGO</text>
-  <text x="286" y="852" fill="#102a43" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700">TIES RESTORED</text>
-  <text x="286" y="884" fill="#355b6e" font-family="DejaVu Sans, sans-serif" font-size="14">Diplomatic relations</text>
-  <text x="286" y="905" fill="#355b6e" font-family="DejaVu Sans, sans-serif" font-size="14">to resume.</text>
-  <!-- linked rings = renewed ties -->
-  <circle cx="411" cy="934" r="15" fill="none" stroke="#277c9b" stroke-width="7"/>
-  <circle cx="438" cy="934" r="15" fill="none" stroke="#277c9b" stroke-width="7"/>
+  <!-- scene caption -->
+  <text x="1000" y="486" text-anchor="end" fill="#a9d6e4" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13" font-weight="700" letter-spacing="2">NAVAL BASE · BENGHAZI, LIBYA</text>
 
-  <rect x="492" y="790" width="208" height="174" rx="8" fill="#e6dfc9" stroke="#102a43" stroke-width="3"/>
-  <text x="510" y="820" fill="#d84f3f" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700">BELGIUM</text>
-  <text x="510" y="850" fill="#102a43" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="700">NATIONAL STRIKE</text>
-  <text x="510" y="884" fill="#355b6e" font-family="DejaVu Sans, sans-serif" font-size="14">Flights and trains</text>
-  <text x="510" y="905" fill="#355b6e" font-family="DejaVu Sans, sans-serif" font-size="14">cancelled.</text>
-  <!-- grounded plane and stopped train -->
-  <path d="M514 932 L530 932 L541 923 L548 923 L542 932 L559 932 L565 938 L559 943 L514 943 Z" fill="#102a43"/>
-  <circle cx="523" cy="943" r="4" fill="#102a43"/>
-  <circle cx="553" cy="943" r="4" fill="#102a43"/>
-  <path d="M510 948 L566 914" stroke="#d84f3f" stroke-width="6"/>
-  <path d="M572 933 L572 951 M618 933 L618 951" stroke="#d84f3f" stroke-width="5"/>
-  <rect x="576" y="926" width="38" height="22" rx="5" fill="#277c9b"/>
-  <circle cx="584" cy="952" r="5" fill="#102a43"/>
-  <circle cx="606" cy="952" r="5" fill="#102a43"/>
+  <!-- headline block -->
+  <rect x="0" y="140" width="588" height="204" fill="#d8492b"/>
+  <rect x="0" y="344" width="588" height="6" fill="#f0b23e"/>
+  <text x="30" y="174" fill="#ffe9a3" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13" font-weight="700" letter-spacing="3">LEAD — UKRAINE STRIKES INTO THE MEDITERRANEAN</text>
+  <text x="28" y="216" fill="#fdfaf2" font-family="Liberation Sans Narrow, Liberation Sans, sans-serif" font-size="39" font-weight="700">UKRAINE SAYS ITS</text>
+  <text x="28" y="258" fill="#fdfaf2" font-family="Liberation Sans Narrow, Liberation Sans, sans-serif" font-size="39" font-weight="700">DRONES SANK RUSSIAN</text>
+  <text x="28" y="300" fill="#fdfaf2" font-family="Liberation Sans Narrow, Liberation Sans, sans-serif" font-size="39" font-weight="700">WARSHIP AT BENGHAZI</text>
+  <text x="30" y="330" fill="#ffd9c4" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="14" font-weight="700">SBU: seven drones sank corvette Merkury; cargo ship Angara also hit.</text>
 
-  <rect x="716" y="790" width="264" height="174" rx="8" fill="#d7e8e2" stroke="#102a43" stroke-width="3"/>
-  <text x="734" y="820" fill="#d84f3f" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700">BRAZIL / TUPANCIRETÃ</text>
-  <text x="734" y="852" fill="#102a43" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="700">SUPERCELL STORM</text>
-  <text x="734" y="884" fill="#355b6e" font-family="DejaVu Sans, sans-serif" font-size="14">Town devastated;</text>
-  <text x="734" y="905" fill="#355b6e" font-family="DejaVu Sans, sans-serif" font-size="14">thousands displaced.</text>
-  <!-- storm cloud, lightning, damaged roof -->
-  <path d="M895 909 q-18-20 2-35 q15-13 28 1 q17-5 27 10 q18-2 20 17 q-2 18-24 18z" fill="#47718a"/>
-  <path d="M927 911 l-10 25 l14-2 l-8 25" fill="#f5c542" stroke="#102a43" stroke-width="2"/>
-  <path d="M955 919 l-7 11 M918 919 l-8 11 M887 919 l-7 11" stroke="#277c9b" stroke-width="4"/>
-  <path d="M886 948 L909 927 L932 948 Z" fill="#c6c1bb" stroke="#102a43" stroke-width="3"/>
-  <path d="M909 927 l23 21" stroke="#d84f3f" stroke-width="4"/>
+  <!-- caption strip under hero -->
+  <text x="40" y="524" fill="#d8492b" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13" font-weight="700" letter-spacing="1">KYIV’S CLAIM —</text>
+  <text x="168" y="524" fill="#17242e" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13.5">Seven drones launched from a “mothership”, SBU says;</text>
+  <text x="40" y="544" fill="#17242e" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13.5">Zelenskyy releases “exemplary” footage; Libya’s Tripoli government protests.</text>
+  <rect x="522" y="512" width="1.4" height="44" fill="#b7ad96"/>
+  <text x="540" y="524" fill="#d8492b" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13" font-weight="700" letter-spacing="1">IN UKRAINE —</text>
+  <text x="652" y="524" fill="#17242e" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13.5">Russian strikes kill at least 15 in the Kyiv region;</text>
+  <text x="540" y="544" fill="#17242e" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13.5">a boy, 7, is pulled alive from a collapsed block of flats at Dymer.</text>
 
-  <text x="512" y="993" text-anchor="middle" fill="#355b6e" font-family="DejaVu Sans, sans-serif" font-size="13" font-weight="700" letter-spacing="1">FACTS REPORTED ON 23 NOVEMBER 2026 • WORLDWIDE</text>
+  <rect x="40" y="562" width="944" height="1.4" fill="#17242e"/>
+
+  <!-- ================= CARD ROW A ================= -->
+  <!-- A1 COP31 -->
+  <g>
+    <rect x="40" y="574" width="296" height="182" fill="#e9e3cf"/>
+    <rect x="40" y="574" width="296" height="5" fill="#2e7d52"/>
+    <text x="58" y="600" fill="#2e7d52" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5">CLIMATE · COP31 FALLOUT</text>
+    <text x="58" y="632" fill="#17242e" font-family="Liberation Sans Narrow, Liberation Sans, sans-serif" font-size="24" font-weight="700">COP31 FAILURE</text>
+    <text x="58" y="658" fill="#17242e" font-family="Liberation Sans Narrow, Liberation Sans, sans-serif" font-size="24" font-weight="700">SPURS REFORM CALLS</text>
+    <text x="58" y="688" fill="#40566a" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13">Gore, scientists urge overhaul of</text>
+    <text x="58" y="706" fill="#40566a" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13">consensus rule; UN’s Stiell backs</text>
+    <text x="58" y="724" fill="#40566a" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13">review after Sunday’s no-pact end.</text>
+    <!-- glyph tile: cracked globe -->
+    <rect x="262" y="676" width="62" height="62" fill="#17242e"/>
+    <circle cx="293" cy="707" r="21" fill="none" stroke="#f5f0e2" stroke-width="3.5"/>
+    <path d="M272 707 L314 707 M293 686 q-11 21 0 42 M293 686 q11 21 0 42" fill="none" stroke="#f5f0e2" stroke-width="2.5"/>
+    <path d="M293 686 L288 700 L298 710 L289 722 L295 728" fill="none" stroke="#f0b23e" stroke-width="3.5"/>
+  </g>
+
+  <!-- A2 Hormuz / Iran -->
+  <g>
+    <rect x="364" y="574" width="296" height="182" fill="#dde9ec"/>
+    <rect x="364" y="574" width="296" height="5" fill="#2e7d97"/>
+    <text x="382" y="600" fill="#b23b1e" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5">IRAN–US WAR · MIDDLE EAST</text>
+    <text x="382" y="632" fill="#17242e" font-family="Liberation Sans Narrow, Liberation Sans, sans-serif" font-size="24" font-weight="700">HORMUZ SHIPS HIT</text>
+    <text x="382" y="658" fill="#17242e" font-family="Liberation Sans Narrow, Liberation Sans, sans-serif" font-size="24" font-weight="700">AT RECORD PACE</text>
+    <text x="382" y="688" fill="#40566a" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13">Three more struck by projectiles</text>
+    <text x="382" y="706" fill="#40566a" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13">since Friday; Iran vows “all means”</text>
+    <text x="382" y="724" fill="#40566a" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13">against the US naval blockade.</text>
+    <!-- glyph tile: strait map -->
+    <rect x="586" y="676" width="62" height="62" fill="#17242e"/>
+    <path d="M586 676 L648 676 L648 696 Q620 706 586 700 Z" fill="#5d7183"/>
+    <path d="M586 738 L648 738 L648 724 Q612 714 586 722 Z" fill="#5d7183"/>
+    <path d="M586 700 Q612 712 648 704 L648 716 Q614 724 586 718 Z" fill="#8fc3d4"/>
+    <path d="M604 706 L618 706 L622 711 L617 715 L604 715 Z" fill="#f0b23e"/>
+    <path d="M630 700 l3 6 l6 -2 l-4 6 l5 5 l-7 -1 l-2 7 l-2 -7 l-7 -2 l6 -4 l-4 -6 l7 2 z" fill="#d8492b"/>
+  </g>
+
+  <!-- A3 Gaza -->
+  <g>
+    <rect x="688" y="574" width="296" height="182" fill="#e8ddd2"/>
+    <rect x="688" y="574" width="296" height="5" fill="#b23b1e"/>
+    <text x="706" y="600" fill="#b23b1e" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5">GAZA · ENVIRONMENT</text>
+    <text x="706" y="632" fill="#17242e" font-family="Liberation Sans Narrow, Liberation Sans, sans-serif" font-size="24" font-weight="700">GAZA A “TOXIC</text>
+    <text x="706" y="658" fill="#17242e" font-family="Liberation Sans Narrow, Liberation Sans, sans-serif" font-size="24" font-weight="700">WASTELAND” — OXFAM</text>
+    <text x="706" y="688" fill="#40566a" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13">Oxfam–Ceobs: air, soil and water</text>
+    <text x="706" y="706" fill="#40566a" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13">poisoned “for generations”; strike</text>
+    <text x="706" y="724" fill="#40566a" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13">kills an UNRWA worker at a well.</text>
+    <!-- glyph tile: hazard triangle + droplet -->
+    <rect x="910" y="676" width="62" height="62" fill="#17242e"/>
+    <path d="M941 684 L962 726 L920 726 Z" fill="none" stroke="#f0b23e" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M941 702 q9 11 0 17 q-9 -6 0 -17z" fill="#f0b23e"/>
+    <path d="M918 730 l10 5 M932 730 l-6 6 M950 730 l9 5" stroke="#d8492b" stroke-width="3"/>
+  </g>
+
+  <!-- ================= CARD ROW B ================= -->
+  <!-- B1 US House -->
+  <g>
+    <rect x="40" y="768" width="296" height="182" fill="#dfe7ef"/>
+    <rect x="40" y="768" width="296" height="5" fill="#3b6ea5"/>
+    <text x="58" y="794" fill="#3b6ea5" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5">UNITED STATES</text>
+    <text x="58" y="826" fill="#17242e" font-family="Liberation Sans Narrow, Liberation Sans, sans-serif" font-size="24" font-weight="700">DEMS’ BIGGEST HOUSE</text>
+    <text x="58" y="852" fill="#17242e" font-family="Liberation Sans Narrow, Liberation Sans, sans-serif" font-size="24" font-weight="700">WIN SINCE ’92</text>
+    <text x="58" y="882" fill="#40566a" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13">Recount seals N.C. seat for</text>
+    <text x="58" y="900" fill="#40566a" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13">Hubbard, 330 votes over Foxx;</text>
+    <text x="58" y="918" fill="#40566a" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13">Dems at 258+, Senate too.</text>
+    <!-- glyph tile: seat bars -->
+    <rect x="262" y="870" width="62" height="62" fill="#17242e"/>
+    <rect x="272" y="886" width="16" height="38" fill="#4a7ba6"/>
+    <rect x="294" y="904" width="16" height="20" fill="#d8492b"/>
+    <rect x="270" y="924" width="44" height="3" fill="#f5f0e2"/>
+    <text x="278" y="881" fill="#f5f0e2" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="11" font-weight="700">258</text>
+  </g>
+
+  <!-- B2 Europe strikes -->
+  <g>
+    <rect x="364" y="768" width="296" height="182" fill="#efe2da"/>
+    <rect x="364" y="768" width="296" height="5" fill="#d8492b"/>
+    <text x="382" y="794" fill="#b23b1e" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5">EUROPE · LABOUR</text>
+    <text x="382" y="826" fill="#17242e" font-family="Liberation Sans Narrow, Liberation Sans, sans-serif" font-size="24" font-weight="700">STRIKE EMPTIES</text>
+    <text x="382" y="852" fill="#17242e" font-family="Liberation Sans Narrow, Liberation Sans, sans-serif" font-size="24" font-weight="700">BELGIUM’S SKIES</text>
+    <text x="382" y="882" fill="#40566a" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13">Brussels, Charleroi halt</text>
+    <text x="382" y="900" fill="#40566a" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13">all flights; unions march</text>
+    <text x="382" y="918" fill="#40566a" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13">as protests sweep Europe.</text>
+    <!-- glyph tile: grounded plane -->
+    <rect x="586" y="870" width="62" height="62" fill="#17242e"/>
+    <path d="M598 902 L626 902 L638 890 L646 890 L638 902 L630 914 L598 914 Z" fill="#f5f0e2"/>
+    <rect x="596" y="916" width="46" height="3" fill="#5d7183"/>
+    <path d="M600 886 L640 928 M640 886 L600 928" stroke="#d8492b" stroke-width="5"/>
+  </g>
+
+  <!-- B3 Indonesia -->
+  <g>
+    <rect x="688" y="768" width="296" height="182" fill="#e8e3d3"/>
+    <rect x="688" y="768" width="296" height="5" fill="#7a6a2e"/>
+    <text x="706" y="794" fill="#7a6a2e" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5">INDONESIA · BANTEN</text>
+    <text x="706" y="826" fill="#17242e" font-family="Liberation Sans Narrow, Liberation Sans, sans-serif" font-size="24" font-weight="700">CANDY FACTORY</text>
+    <text x="706" y="852" fill="#17242e" font-family="Liberation Sans Narrow, Liberation Sans, sans-serif" font-size="24" font-weight="700">FIRE KILLS 24</text>
+    <text x="706" y="882" fill="#40566a" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13">Cikande, Banten plant burns ~14</text>
+    <text x="706" y="900" fill="#40566a" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13">hours; about 30 workers still</text>
+    <text x="706" y="918" fill="#40566a" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="13">missing as DNA tests begin.</text>
+    <!-- glyph tile: burning factory -->
+    <rect x="910" y="870" width="62" height="62" fill="#17242e"/>
+    <path d="M920 922 L920 902 L934 892 L948 902 L962 892 L962 922 Z" fill="#d8d2c0"/>
+    <rect x="924" y="884" width="8" height="14" fill="#d8d2c0"/>
+    <path d="M938 902 q-9 -16 1 -26 q0 12 8 16 q3 -10 8 -14 q9 16 -2 24z" fill="#d8492b"/>
+    <path d="M943 900 q-4 -8 1 -14 q1 7 5 9 q2 -5 4 -7 q5 9 -1 13z" fill="#f0b23e"/>
+  </g>
+
+  <!-- ================= IN BRIEF mini-roundup ================= -->
+  <rect x="40" y="948" width="944" height="1.4" fill="#17242e"/>
+  <text x="40" y="966" fill="#d8492b" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="12" font-weight="700" letter-spacing="2">IN BRIEF · REPORTED MONDAY 23 NOVEMBER 2026</text>
+  <text x="984" y="966" text-anchor="end" fill="#5d7183" font-family="Liberation Sans, DejaVu Sans, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1">AP · REUTERS · BBC · THE GUARDIAN · AL JAZEERA · UN</text>
+
+  <g font-family="Liberation Sans, DejaVu Sans, sans-serif" fill="#17242e">
+    <text x="40" y="986" font-size="13" font-weight="700" letter-spacing="1">SUDAN</text>
+    <text x="40" y="1002" font-size="12" fill="#40566a">RSF drone strikes on Khartoum</text>
+    <text x="40" y="1016" font-size="12" fill="#40566a">kill 4, damage a UN building.</text>
+
+    <rect x="348" y="976" width="1.2" height="40" fill="#b7ad96"/>
+    <text x="364" y="986" font-size="13" font-weight="700" letter-spacing="1">MEXICO</text>
+    <text x="364" y="1002" font-size="12" fill="#40566a">“Chapo Isidro” in custody after</text>
+    <text x="364" y="1016" font-size="12" fill="#40566a">Sinaloa raid leaves 11+ dead.</text>
+
+    <rect x="672" y="976" width="1.2" height="40" fill="#b7ad96"/>
+    <text x="688" y="986" font-size="13" font-weight="700" letter-spacing="1">KENYA–DR CONGO</text>
+    <text x="688" y="1002" font-size="12" fill="#40566a">Ruto, Tshisekedi agree at Oyo</text>
+    <text x="688" y="1016" font-size="12" fill="#40566a">to restore full diplomatic ties.</text>
+  </g>
 </svg>
