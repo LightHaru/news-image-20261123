@@ -1,8 +1,13 @@
-import { mkdir, copyFile } from "node:fs/promises";
-import { dirname, join } from "node:path";
+import { copyFile, mkdir } from "node:fs/promises";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 
-const outputDir = process.env.MAKEFUN_OUTPUT_DIR || "/output";
-const destination = join(outputDir, "entry.png");
+const artwork = fileURLToPath(new URL("entry.png", import.meta.url));
 
-await mkdir(dirname(destination), { recursive: true });
-await copyFile(new URL("./entry.png", import.meta.url), destination);
+async function writeEdition(outputDirectory: string): Promise<void> {
+  const destination = resolve(outputDirectory, "entry.png");
+  await mkdir(dirname(destination), { recursive: true });
+  await copyFile(artwork, destination);
+}
+
+await writeEdition(process.env.MAKEFUN_OUTPUT_DIR ?? "/output");
